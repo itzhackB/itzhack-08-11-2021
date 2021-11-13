@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.headerContainer{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  font-family: 'Dongle', sans-serif;
+  font-size: x-large;
+}
+.mainCard{
+  font-family: 'Dongle', sans-serif;
+  color:white;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+}
+
+.daysForecastWrapper{
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 20px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-left: 2%;
+  margin-right: 2%
+}
+.daysForecast{
+  display: flex;
+    background: white;
+    justify-content: center;
+    height: 120px;
+    align-items: center;
+    width: 80%;
+}
+.cardsWrapper{
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  padding: 20 px 10 px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8 px;
+  border: white 1px solid;
+  height: 50vh
+
+
+}
+.autoComplete{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
