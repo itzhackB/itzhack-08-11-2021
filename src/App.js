@@ -15,7 +15,9 @@ function App() {
   const dispatch = useDispatch()
   const isLoading = useSelector((state) => state.isLoading)
   const theme = useSelector((state) => state.theme)
-  
+  const currentWeather = useSelector((state) => state.weather.current)
+
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       location => dispatch(getCityByGeo(location.coords.latitude, location.coords.longitude)),
@@ -26,11 +28,19 @@ function App() {
     saveFavorites(store.getState.favorites)
   }, [dispatch])
 
+
   return (
     <div className={theme ? "App" : "dark"}>
       {isLoading ? <LoaderComponent /> : ""}
-      <HeaderComponent />
-      <Routing />
+      {
+        Object.keys(currentWeather).length === 0 ? ""
+          :
+          <>
+            <HeaderComponent />
+            <Routing />
+          </>
+      }
+
     </div>
   );
 }

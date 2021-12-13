@@ -1,7 +1,7 @@
 import { SET_LOCATION, GET_CURRENT_CITY, CURRENT_CITY_WEEK_WEATHER, SET_LOADING } from "./types";
 import axios from "axios";
 
-const API_KEY = 'SMWoYBgzohr64Y8FpGTAu6TBnmN8Eg7W'
+const API_KEY = 'wOoT0blOADflg09p2sBk1Z28WuUnFalS'
 const autoComplelteURL = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey='
 const weeklyWeatherURL = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/"
 const currentURL = 'https://dataservice.accuweather.com/currentconditions/v1/'
@@ -29,7 +29,7 @@ export const getLocationWeather = cityKey => async dispatch => {
 }
 
 export const currentWeather = cityKey => async dispatch => {
-    const response = await axios.get(`${currentURL}${cityKey}?apikey=${API_KEY}`)
+    const response = await axios.get(`${currentURL}${cityKey}?apikey=${API_KEY}&getphotos=true`)
     await dispatch({ type: GET_CURRENT_CITY, payload: response.data[0] })
 
 }

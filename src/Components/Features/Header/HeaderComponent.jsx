@@ -2,9 +2,8 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faToggleOn } from '@fortawesome/free-solid-svg-icons'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
 import isDev from '../../../utils/environment'
-import { setTheme } from '../../../Redux/actions/themeAction'
 import { tempUnitAction } from '../../../Redux/actions/tempUnitAction'
 
 const HeaderComponent = () => {
@@ -13,59 +12,46 @@ const HeaderComponent = () => {
 
     const dispatch = useDispatch()
     return (
-        <div className="headerContainer" >
-            {isDev() ? <Link to="/itzhack-08-11-2021">
-                <h1 className="weatherTitle" style={{ color: "white" }}>Weather App</h1>
-            </Link>
-                :
-                <Link to="https://itzhackb.github.io/itzhack-08-11-2021/#/">
-                    <h1 className="weatherTitle" style={{ color: "white" }}>Weather App</h1>
-                </Link>
-            }
+        <header className="header">
+            <div className="container">
+                <nav className="header-nav">
 
-            <div style={{ display: 'flex' }}>
-                {isDev() ? <Link to="/itzhack-08-11-2021/favorites">
-                    <FontAwesomeIcon icon={faBell} style={{ color: "white", fontSize: '1em' }} />
-                    <div style={{
-                        color: 'white',
-                        fontSize: '1em',
-                        position: 'relative',
-                        bottom: '10%',
-                        left: '25%',
-                    }}>
-                        {favorites.length}</div>
-                </Link>
-                    :
-                    <Link to="https://itzhackb.github.io/itzhack-08-11-2021/#/favorites">
-                        <FontAwesomeIcon icon={faBell} style={{ color: "red", fontSize: '1em' }} />
-                        <div style={{
-                            color: 'white',
-                            fontSize: '1em',
-                            position: 'relative',
-                            bottom: '10%',
-                            left: '25%',
-                        }}>
-                            {favorites.length}</div>
+                    {isDev() ? <Link to="/itzhack-08-11-2021">
+                        <h1 className="header__logo" style={{ color: "white" }}>Weather App</h1>
                     </Link>
-                }
+                        :
+                        <Link to="https://itzhackb.github.io/itzhack-08-11-2021/#/">
+                            <h1 className="header__logo" style={{ color: "white" }}>Weather App</h1>
+                        </Link>
+                    }
 
-                {
-                    <button style={{
-                        backgroundColor: 'transparent',
-                        borderWidth: '0',
-                        padding: 0,
-                        position: 'relative',
-                        bottom: '40%',
-                        left: '25%'
-                    }} 
-                        onClick={() => dispatch(tempUnitAction())}><div>{temp ? '\xB0C' : '\xB0F'}</div></button>
-                }
+                    <ul className="header__list">
+                        <li>
+                            {isDev() ? <Link to="/itzhack-08-11-2021/favorites">
+                                <FontAwesomeIcon icon={faBell} style={{ color: "white", fontSize: '1em' }} />
+                                <div className="header__favorite-num">
+                                    {favorites.length}</div>
+                            </Link>
+                                :
+                                <Link to="https://itzhackb.github.io/itzhack-08-11-2021/#/favorites">
+                                    <FontAwesomeIcon icon={faBell} style={{ color: "red", fontSize: '1em' }} />
+                                    <div className="header__favorite-num">
+                                        {favorites.length}</div>
+                                </Link>
+                            }
+                        </li>
 
+                        <li>
+                            <button
+                            onClick={() => dispatch(tempUnitAction())}><div className="header__unit-icon">{temp ? '\xB0C' : '\xB0F'}</div></button>
+                        </li>
+
+                    </ul>
+
+                </nav>
             </div>
+        </header>
 
-
-
-        </div >
     )
 }
 

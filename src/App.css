@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
-
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -9,6 +16,7 @@
   pointer-events: none;
 }
 
+
 .headerContainer{
   display: flex;
   justify-content: space-around;
@@ -17,12 +25,11 @@
   font-family: 'Dongle', sans-serif;
   font-size: x-large;
 }
-.mainCard{
-  font-family: 'Dongle', sans-serif;
-  color:white;
-  font-size: x-large;
+
+.container > i{
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 .daysForecastWrapper{
@@ -61,8 +68,119 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
+.home{
+  background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+
+.container {
+  max-width: 117rem;
+  padding: 0 1.6rem;
+  margin: 0 auto;
+}
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.header__navbar {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.header__list {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.header__list li {
+  margin-left: 1.6rem;
+}
+.header__list li i {
+  font-size: 2rem;
+}
+.container {
+  max-width: 117rem;
+  padding: 0 1.6rem;
+  margin: 0 auto;
+}
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.header__navbar {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.header__list {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.header__list li {
+  margin-left: 1.6rem;
+}
+.header__list li i {
+  font-size: 2rem;
+}
+.header__unit-icon {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 1.15px;
+}
+.header__favorite-num {
+  position: relative;
+  bottom: 50%;
+  left: 6px;
+  border-radius: 100px;
+  height: 14px;
+  width: 13px;
+  background-color: red;
+  text-align: center;
+  font-size: 11px;
+  line-height: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+dd, ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -91,4 +209,73 @@
   to {
     transform: rotate(360deg);
   }
+}
+.weather-forecast__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6vmin 0 4.2rem;
+}
+@media (max-width: 480px) {
+  .weather-forecast__list {
+    display: flex;
+    flex-flow: column;
+  }
+}
+.weather-forecast__item {
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 1.6rem;
+  flex-basis: 15%;
+}
+@media (max-width: 480px) {
+  .weather-forecast__item {
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 1.6rem;
+    display: flex;
+    margin-bottom: 1.6rem;
+    flex-basis: 30px;
+    align-items: center;
+  }
+  .weather-forecast__item :nth-child(n + 3) {
+    flex-grow: 1;
+  }
+  .weather-forecast__item > p {
+    flex-basis: 50px;
+  }
+}
+.weather-forecast__day {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.weather-forecast__current {
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.weather-current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weather-current__today {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+.weather-current__btn {
+  border: 1px solid;
+  border-radius: 2rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+button {
+  color: inherit;
+  cursor: pointer;
 }

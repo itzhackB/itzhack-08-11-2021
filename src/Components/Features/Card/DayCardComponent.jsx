@@ -1,34 +1,30 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { tempConverter } from '../../../utils/tempConverter';
+import "../../../css/weather-icons.min.css";
+import '../../../css/weather-icons.css'
+
+
 
 var moment = require('moment');
 
-const DayCardComponent = ({ day }) => {
+const DayCardComponent = ({ day, index }) => {
+
     const currentWeather = useSelector((state) => state.weather.current)
     const temp = useSelector((state) => state.temp)
 
-    let newDate = new Date();
-    const weekday = day.Date * 1000
-    newDate.setTime(weekday)
-
     const isDayTime = currentWeather.IsDayTime ? 'Day' : 'Night'
     return (
+        <>
 
-        <div className="col-sm-2">
-            <div className="card">
-                <p className="card-title"><i className={`wi icon-accu${day[isDayTime].Icon}`}></i></p>
-                <p className="text-muted">{moment(day.Date).format('ddd')}</p>
-                {
-                    temp? <h2>{Math.round(day.Temperature.Minimum.Value)} °F</h2>
-                    :
-                    <h2>{tempConverter(Math.round(day.Temperature.Minimum.Value))} °C</h2>
-                }
-                <div className="card-body">
-                    <p className="card-text">{day[isDayTime].IconPhrase}</p>
-                </div>
+            <div key={index} className="weather-forecast__item">
+                <p className="weather-forecast__day">{moment(day.Date).format('ddd')}</p>
+                <p className="weather-forecast__icon"><i className={`wi icon-accu${day.Day.Icon} `}></i></p>
+                <p className="weather-forecast__temp">{temp ? `${Math.round(day.Temperature.Minimum.Value)} °F` : `${tempConverter(Math.round(day.Temperature.Minimum.Value))} °C`}</p>
+                <p className="weather__forecast__text">{day[isDayTime].IconPhrase}</p>
             </div>
-        </div>
+
+        </>
     )
 }
 

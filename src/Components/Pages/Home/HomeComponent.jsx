@@ -9,15 +9,13 @@ import AutocompleteComponent from '../../Features/Autocomplete/AutocompleteCompo
 const HomeComponent = () => {
 
     const dispatch = useDispatch()
-    const theme = useSelector((state)=>state.theme)
-    
+
     useEffect(() => {
         dispatch(GetdeafultCity('Tel aviv'))
     }, [dispatch])
 
- 
     return (
-        <div style={{ background: 'linear-gradient(45deg,#469FFF,#A39AF9)'}}>
+        <div className="home"  >
             <AutocompleteComponent/>
             <WeekContainer/>
         </div>

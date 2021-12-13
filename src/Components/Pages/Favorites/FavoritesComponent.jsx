@@ -15,13 +15,12 @@ const FavoritesComponent = () => {
     useEffect(() => {
         const fetchFavorites = async () => {
             const CURRENT_URL = 'https://dataservice.accuweather.com/currentconditions/v1/'
-            const API_KEY = 'SMWoYBgzohr64Y8FpGTAu6TBnmN8Eg7W'
+            const API_KEY = 'wOoT0blOADflg09p2sBk1Z28WuUnFalS'
             for await (const fav of favorites) {
                 const data = await axios.get(`${CURRENT_URL}${fav.id}?apikey=${API_KEY}`)
                 tempFavoriteList[fav.id] = data.data[0]
             }
             setFavoriteList(tempFavoriteList)
-            console.log(favoriteList);
         }
         fetchFavorites()
     }, [])
