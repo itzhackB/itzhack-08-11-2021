@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/itzhack-08-11-2021/static/css/main.8d5215fd.chunk.css",
-    "main.js": "/itzhack-08-11-2021/static/js/main.e0844635.chunk.js",
-    "main.js.map": "/itzhack-08-11-2021/static/js/main.e0844635.chunk.js.map",
-    "runtime-main.js": "/itzhack-08-11-2021/static/js/runtime-main.a38cdaee.js",
-    "runtime-main.js.map": "/itzhack-08-11-2021/static/js/runtime-main.a38cdaee.js.map",
-    "static/js/2.92803745.chunk.js": "/itzhack-08-11-2021/static/js/2.92803745.chunk.js",
-    "static/js/2.92803745.chunk.js.map": "/itzhack-08-11-2021/static/js/2.92803745.chunk.js.map",
-    "static/js/3.59e76e11.chunk.js": "/itzhack-08-11-2021/static/js/3.59e76e11.chunk.js",
-    "static/js/3.59e76e11.chunk.js.map": "/itzhack-08-11-2021/static/js/3.59e76e11.chunk.js.map",
+    "main.css": "/itzhack-08-11-2021/static/css/main.42ab9c28.chunk.css",
+    "main.js": "/itzhack-08-11-2021/static/js/main.83e2e7a0.chunk.js",
+    "main.js.map": "/itzhack-08-11-2021/static/js/main.83e2e7a0.chunk.js.map",
+    "runtime-main.js": "/itzhack-08-11-2021/static/js/runtime-main.a21b5302.js",
+    "runtime-main.js.map": "/itzhack-08-11-2021/static/js/runtime-main.a21b5302.js.map",
+    "static/js/2.ac5c6f49.chunk.js": "/itzhack-08-11-2021/static/js/2.ac5c6f49.chunk.js",
+    "static/js/2.ac5c6f49.chunk.js.map": "/itzhack-08-11-2021/static/js/2.ac5c6f49.chunk.js.map",
+    "static/js/3.eedd0281.chunk.js": "/itzhack-08-11-2021/static/js/3.eedd0281.chunk.js",
+    "static/js/3.eedd0281.chunk.js.map": "/itzhack-08-11-2021/static/js/3.eedd0281.chunk.js.map",
     "index.html": "/itzhack-08-11-2021/index.html",
-    "static/css/main.8d5215fd.chunk.css.map": "/itzhack-08-11-2021/static/css/main.8d5215fd.chunk.css.map",
-    "static/js/2.92803745.chunk.js.LICENSE.txt": "/itzhack-08-11-2021/static/js/2.92803745.chunk.js.LICENSE.txt"
+    "static/css/main.42ab9c28.chunk.css.map": "/itzhack-08-11-2021/static/css/main.42ab9c28.chunk.css.map",
+    "static/js/2.ac5c6f49.chunk.js.LICENSE.txt": "/itzhack-08-11-2021/static/js/2.ac5c6f49.chunk.js.LICENSE.txt",
+    "static/media/weather-icons.css": "/itzhack-08-11-2021/static/media/weathericons-regular-webfont.e218aee6.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.a38cdaee.js",
-    "static/js/2.92803745.chunk.js",
-    "static/css/main.8d5215fd.chunk.css",
-    "static/js/main.e0844635.chunk.js"
+    "static/js/runtime-main.a21b5302.js",
+    "static/js/2.ac5c6f49.chunk.js",
+    "static/css/main.42ab9c28.chunk.css",
+    "static/js/main.83e2e7a0.chunk.js"
   ]
 }
