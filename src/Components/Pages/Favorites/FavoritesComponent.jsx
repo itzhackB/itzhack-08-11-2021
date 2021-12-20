@@ -83,14 +83,14 @@ const FavoritesComponent = () => {
                 <button onClick={() => console.log(favoritesGeo())}>Check</button>
 
             </div>
-            <div style={{ height: "50vh", width: "50vw" }}>
+            {/* <div style={{ height: "50vh", width: "50vw" }}>
                 <WrappedMap
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${GOOGLE_KEY}`}
                     loadingElement={<div style={{ height: "100%" }} />}
                     containerElement={<div style={{ height: "100%" }} />}
                     mapElement={<div style={{ height: "100%" }} />}
                 />
-            </div>
+            </div> */}
 
         </div>
     )
