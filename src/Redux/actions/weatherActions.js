@@ -1,7 +1,7 @@
 import { SET_LOCATION, GET_CURRENT_CITY, CURRENT_CITY_WEEK_WEATHER, SET_LOADING } from "./types";
 import axios from "axios";
 
-const API_KEY = 'wOoT0blOADflg09p2sBk1Z28WuUnFalS'
+const API_KEY = 'SMWoYBgzohr64Y8FpGTAu6TBnmN8Eg7W'
 const autoComplelteURL = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey='
 const weeklyWeatherURL = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/"
 const currentURL = 'https://dataservice.accuweather.com/currentconditions/v1/'

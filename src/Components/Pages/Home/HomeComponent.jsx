@@ -1,23 +1,20 @@
-import React, { useEffect } from 'react'
-import { useDispatch,useSelector } from "react-redux";
-import { GetdeafultCity } from '../../../Redux/actions/weatherActions';
+import React, {useContext} from 'react'
 import WeekContainer from '../../Features/WeekContainer/WeekContainer';
 import AutocompleteComponent from '../../Features/Autocomplete/AutocompleteComponent';
+import GetMyLocation from '../../Features/GetMyLocation/GetMyLocation';
+import { ThemeContext } from '../../../context/themeContext';
 
 
 
 const HomeComponent = () => {
 
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(GetdeafultCity('Tel aviv'))
-    }, [dispatch])
+    const {toggle} = useContext(ThemeContext)
 
     return (
         <div className="home"  >
-            <AutocompleteComponent/>
-            <WeekContainer/>
+            <AutocompleteComponent toggle={toggle}/>
+            <GetMyLocation toggle={toggle}/>
+            <WeekContainer toggle={toggle}/>
         </div>
     )
 }

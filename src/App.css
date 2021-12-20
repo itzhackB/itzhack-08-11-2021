@@ -66,8 +66,8 @@
 }
 .autoComplete{
   display: flex;
+  margin-bottom: -50px;
   justify-content: center;
-  margin-bottom: 5%;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: auto;
@@ -158,8 +158,8 @@
 }
 .header__favorite-num {
   position: relative;
-  bottom: 50%;
-  left: 6px;
+  bottom: 39%;
+  left: 18px;
   border-radius: 100px;
   height: 14px;
   width: 13px;
@@ -170,6 +170,9 @@
   font-family: "Open Sans", sans-serif;
   color: white;
   font-weight: bold;
+}
+a{
+  text-decoration-line: none
 }
 dd, ol, ul {
   margin: 0;
@@ -228,6 +231,9 @@ button {
   border-radius: 1.6rem;
   flex-basis: 15%;
 }
+.fa-bell{
+  color: black;
+}
 @media (max-width: 480px) {
   .weather-forecast__item {
     text-align: center;
@@ -279,3 +285,22 @@ button {
   color: inherit;
   cursor: pointer;
 }
+.favorites_logo{
+  display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}
+.location_logo{
+  display: inline-block;
+  position: relative;
+  bottom: 144px;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 1.15px;
+  left: 26%;
+}
+.fa-location-arrow{
+  font-size: 2em;
+}
+

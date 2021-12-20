@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 import store from './Redux/store'
 import { BrowserRouter as Router } from "react-router-dom"
+import { ThemeProvider } from './context/themeContext'
 
 
 
@@ -14,9 +15,11 @@ import { BrowserRouter as Router } from "react-router-dom"
 
 ReactDOM.render(
   < Provider store={store} >
+    <ThemeProvider>
       <Router>
         <App />
       </Router>
+    </ThemeProvider>
   </Provider >,
   document.getElementById('root')
 );

@@ -5,7 +5,7 @@ import { addFavorite, deleteFavorite } from '../../../Redux/actions/favoritesAct
 import Button from '@mui/material/Button';
 
 
-const WeekContainer = () => {
+const WeekContainer = ({ toggle }) => {
 
 
     const dispatch = useDispatch()
@@ -29,7 +29,7 @@ const WeekContainer = () => {
         <>
             {
                 currentWeather.Temperature ?
-                    <div className="weather-forecast container">
+                    <div className="weather-forecast container" style={{ backgroundColor: toggle ? "white" : "#000718", color: toggle ? "#000718" : "white" }}>
                         <div className="weather-current__today">
                             <h2 className="weather-current__title">{currentLocation.city}</h2>
                             <div className="weather-forecast__current">
@@ -37,7 +37,7 @@ const WeekContainer = () => {
                                 <p className="weather-forecast__text">{currentWeather.WeatherText}</p>
                                 <p className="weather-forecast__temp">{temp ? `${currentWeather?.Temperature?.Imperial?.Value} °F` : `${currentWeather?.Temperature?.Metric?.Value} °C`}</p>
                             </div>
-                            {checkIfFavorite() ? <button className="weather-current__btn mainCard"  variant="contained" onClick={() => dispatch(deleteFavorite(currentLocation.cityKey))}>Unsubscribe</button>
+                            {checkIfFavorite() ? <button className="weather-current__btn mainCard" variant="contained" onClick={() => dispatch(deleteFavorite(currentLocation.cityKey))}>Unsubscribe</button>
                                 : <button className="weather-current__btn mainCard" variant="contained" onClick={() => dispatch(addFavorite(currentLocation.cityKey, currentLocation.city))}>Subscribe</button>
                             }
                         </div>
